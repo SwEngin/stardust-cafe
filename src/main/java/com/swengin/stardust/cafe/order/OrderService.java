@@ -1,6 +1,6 @@
 package com.swengin.stardust.cafe.order;
 
-import com.swengin.stardust.cafe.CafeException;
+import com.swengin.stardust.cafe.StardustCafeException;
 import com.swengin.stardust.cafe.product.Product;
 import com.swengin.stardust.cafe.product.ProductRepository;
 import org.apache.commons.collections4.CollectionUtils;
@@ -25,7 +25,7 @@ public class OrderService {
         List<Product> products = productRepository.products();
 
         if (CollectionUtils.isEmpty(retriveRealProducts(items, products))) {
-            throw new CafeException("Order can't be accepted, please choose an item!");
+            throw new StardustCafeException("Order can't be accepted, please choose an item!");
         }
 
         return new ReceiptBuilder()

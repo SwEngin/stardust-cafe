@@ -76,7 +76,7 @@ tasks.withType(Test) {
 }
 
 contracts {
-    baseClassForTests = "com.swengin.stardust.cafe.CafeTestBase"
+    baseClassForTests = "com.swengin.stardust.cafe.StardustCafeTestBase"
 }
 
 wrapper {

@@ -24,5 +24,14 @@ org.springframework.cloud.contract.spec.Contract.make {
 
     response{
         status NOT_ACCEPTABLE()
+
+        body([
+            status: 406,
+            message: "Order can't be accepted, please choose an item!"
+        ])
+
+        headers {
+            contentType(applicationJson())
+        }
     }
 }
